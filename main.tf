@@ -1,14 +1,11 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "${var.aws_region}"
 }
 
 resource "aws_instance" "example" {
   ami           = "ami-2757f631"
-  instance_type = "t2.micro"
-  // instance_type = "t2.2xlarge"
+  instance_type = "${var.aws_instance_type}"
   count         = 1
 
-  tags = { 
-    environment = "demo" 
-  }
+  tags = "${var.aws_tags}"
 }
