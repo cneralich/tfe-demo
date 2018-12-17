@@ -8,9 +8,7 @@ resource "aws_instance" "example" {
   // instance_type = "t2.2xlarge"
   count         = 1
 
-  /*
   tags = { 
     environment = "demo" 
   }
-  */
 }
