@@ -8,6 +8,5 @@ variable "aws_region" {
 
 variable "aws_tags" {
     default = {
-        environment = "demo"
     }
 }
