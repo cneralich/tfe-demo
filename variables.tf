@@ -1,5 +1,5 @@
 variable "aws_instance_type" {
-    default = "t2.micro"
+    default = "t2.2xlarge"
 }
 
 variable "aws_region" {
@@ -8,5 +8,7 @@ variable "aws_region" {
 
 variable "aws_tags" {
     default = {
+        environment = "dev"
+        name = "neil"
     }
 }
