@@ -2,13 +2,18 @@ provider "aws" {
   region = "${var.aws_region}"
 }
 
+terraform {
+  backend "atlas" {
+    name = "neil-test/demo-app"
+  }
+}
+
 data "terraform_remote_state" "skunk" {
   backend = "atlas"
   workspace = "skunk-works"
 
   config = {
     name = "neil-test/skunk-works"
-    access_token = "${var.tfe_access_token}"
   }
 }
 

@@ -12,7 +12,3 @@ variable "aws_tags" {
         name = "neil"
     }
 }
-
-variable "tfe_access_token" {
-    type = "string"
-}
